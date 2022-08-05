@@ -5,7 +5,7 @@ const app = express();
 
 const PORT = process.env.PORT || 8080;
 
-app.use('/api', jsonServer.router('banco-de-dados.json'));
+app.use('http://localhost:3000', jsonServer.router('banco-de-dados.json'));
 app.use(express.static(__dirname + '/dist/app2'));
 
 
